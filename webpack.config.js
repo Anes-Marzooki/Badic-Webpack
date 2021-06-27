@@ -5,6 +5,12 @@ module.exports = {
 		contact: './src/contact.js',
 		about: './src/about.js',
 	},
+	// removes duplication and create a vendor bundle.
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		},
+	},
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
