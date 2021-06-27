@@ -1,16 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: {
-		contact: './src/contact.js',
-		about: './src/about.js',
-	},
+	entry: './src/index.js',
 	// removes duplication and create a vendor bundle.
-	optimization: {
-		splitChunks: {
-			chunks: 'all',
-		},
-	},
+	// optimization: {
+	// 	splitChunks: {
+	// 		chunks: 'all',
+	// 	},
+	// },
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
@@ -41,4 +39,5 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [new HtmlWebpackPlugin()],
 };

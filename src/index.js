@@ -11,4 +11,7 @@ const Hello = () => {
 	);
 };
 
-render(<Hello />, document.getElementById('target'));
+if (document.getElementById('target')) {
+	render(<Hello />, document.getElementById('target'));
+}
+// render(<Hello />, document.getElementById('target'));
