@@ -1,0 +1,9 @@
+#target {
+	color: aqua;
+}
+
+#image {
+	background-image: url(./image.png);
+	height: 300px;
+	background-repeat: no-repeat;
+}
